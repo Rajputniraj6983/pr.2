@@ -326,3 +326,40 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          backgroundColor: Colors.white,
+          appBar: AppBar(
+            centerTitle: true,
+            title: Text("Mashal",style: TextStyle(color: Colors.white),),
+            backgroundColor: Color(0xff795548),
+          ),
+          body: Center(
+            child: Container(
+              height: 200,width: 150,decoration: BoxDecoration(color: Color(0xff795548),
+              border: Border.symmetric(
+                horizontal: BorderSide(color: Color(0xff87665b),width: 25,
+                ),
+                vertical: BorderSide(
+                  color: Color(0xffffffff),width: 40,
+                ),
+              ),
+            ),
+              child: Text('🔥',style: TextStyle(height: -2.3,fontSize: 40,color: Color(0xffFCCA39)),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
